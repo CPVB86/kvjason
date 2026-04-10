@@ -1,0 +1,236 @@
+.mijnvloot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.mijnvloot-item {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.mijnvloot-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f3f3f3;
+}
+
+.mijnvloot-slider,
+.mijnvloot-single-image,
+.mijnvloot-slides,
+.mijnvloot-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.mijnvloot-slide {
+    display: none;
+}
+
+.mijnvloot-slide.active {
+    display: block;
+}
+
+.mijnvloot-slide img,
+.mijnvloot-single-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mijnvloot-overlay {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    z-index: 3;
+}
+
+.mijnvloot-overlay-title {
+    display: inline-block;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.62);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 14px;
+    line-height: 1.2;
+    backdrop-filter: blur(3px);
+}
+
+.mijnvloot-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    border: none;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    cursor: pointer;
+    padding: unset!important;
+}
+
+.mijnvloot-prev {
+    left: 10px;
+}
+
+.mijnvloot-next {
+    right: 10px;
+}
+
+.mijnvloot-body {
+    padding: 16px;
+}
+
+.mijnvloot-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.mijnvloot-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #f4f6f8;
+    border: 1px solid #e3e7eb;
+    font-size: 13px;
+    line-height: 1;
+}
+.mijnvloot-pill-check {
+    font-weight: unset;
+}
+
+.mijnvloot-toggles {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.mijnvloot-toggle {
+    border: 1px solid #d4b70f;
+    background: #E6C712;
+    color: #1f1f1f;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.mijnvloot-toggle:hover {
+    background: #efd74f;
+    border-color: #e2ca37;
+}
+
+.mijnvloot-toggle.is-open {
+    background: #d9bb10;
+    border-color: #c9ac0e;
+    color: #111;
+}
+
+.mijnvloot-toggle.is-open:hover {
+    background: #e3c93a;
+    border-color: #d7bf2d;
+}
+
+.mijnvloot-panel {
+    display: none;
+    margin-bottom: 14px;
+}
+
+.mijnvloot-panel.is-open {
+    display: block;
+}
+
+.mijnvloot-ratings {
+    display: grid;
+    gap: 5px;
+}
+
+.mijnvloot-rating-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px 10px;
+    background: #f4f6f8;
+    border-radius: 10px;
+    margin-bottom: unset!important;
+    font-size: 14px;
+}
+
+.mijnvloot-rating-label {
+    min-width: 170px;
+}
+
+.mijnvloot-paddle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mijnvloot-paddle.filled {
+    background-image: url('paddle-filled-s-y.png');
+}
+
+.mijnvloot-paddle.outline {
+    background-image: url('paddle-outline-s-y.png');
+}
+
+.mijnvloot-tech-table-wrap {
+    overflow-x: auto;
+}
+
+.mijnvloot-tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.mijnvloot-tech-table th,
+.mijnvloot-tech-table td {
+    text-align: left;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e8edf2;
+    vertical-align: top;
+}
+
+.mijnvloot-tech-table th {
+    width: 42%;
+    background: #fafbfc;
+    font-weight: 600;
+}
+
+.mijnvloot-content {
+    margin-top: 14px;
+}
+
+.mijnvloot-content p:last-child {
+    margin-bottom: 0;
+}
+@media (max-width: 767px) {
+    .mijnvloot-rating-row {
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .mijnvloot-rating-label {
+        min-width: 0;
+        width: 100%;
+    }
+}
