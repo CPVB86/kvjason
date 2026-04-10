@@ -1,0 +1,24 @@
+#mijnvloot_gallery_preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.mijnvloot-thumb {
+    border: 2px solid transparent;
+    padding: 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.mijnvloot-thumb img {
+    display: block;
+    max-width: 70px;
+    height: auto;
+}
+
+.mijnvloot-thumb.mijnvloot-highlight {
+    border-color: #007cba;
+    box-shadow: 0 0 0 1px #007cba;
+}
